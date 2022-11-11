@@ -6,17 +6,19 @@ import './RollDice.scss'
 
 
 const RollDice = (props) => {
-  // const recipesArr = ['item1', 'item2', 'item3', 'item4', 'item5', 'item6', 'item7', 'item8', 'item9', 'item10', 'item11', 'item12', 'item13'];
+  const recipesArr = ['item1', 'item2', 'item3', 'item4', 'item5', 'item6', 'item7', 'item8', 'item9', 'item10', 'item11', 'item12', 'item13'];
   const sides = ['one', 'two', 'three', 'four', 'five', 'six'];
 
   const [state, setState] = useState({
     die: 'one',
+    randomRecipe: 'none',
     rolling: false
   })
 
   const roll = () => {
     setState({
       die: sides[Math.floor(Math.random() * sides.length)],
+      randomRecipe: recipesArr[Math.floor(Math.random() * recipesArr.length)],
       rolling: true
     })
   }
@@ -33,7 +35,7 @@ const RollDice = (props) => {
   return (
     <div className="rollDice">
       <div className="diceContainer">
-        <Dice side={state.die} rolling={state.rolling} />
+        <Dice side={state.die} rolling={state.rolling} randomRecipe ={state.randomRecipe}  />
         <button type="Submit" onClick={roll}> {state.rolling ? 'Rolling' : 'Click to Roll'} </button>
       </div>
     </div>
