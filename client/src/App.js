@@ -1,12 +1,12 @@
 import './App.css';
-import Dice from './component/Dice';
+import RollDice from './component/RollDice';
 import Navbar from './component/Navbar';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Dice />
+      <RollDice />
     </div>
   );
 }
