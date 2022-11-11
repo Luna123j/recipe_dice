@@ -1,7 +1,18 @@
 .rollDice {
   display: flex;
-  margin: auto;
-  .diceContainer{
-     
+  width: 100%;
+  .diceContainer {
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+
+    button {
+      width: 15em;
+      padding: 1.5em;
+      border: 0px;
+      border-radius: 10px;
+      margin-top: 3em;
+      align-self: center;
+    }
   }
 }
