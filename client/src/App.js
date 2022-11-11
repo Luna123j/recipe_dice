@@ -6,7 +6,10 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <RollDice />
+      <div>
+          <RollDice />
+      </div>
+
     </div>
   );
 }

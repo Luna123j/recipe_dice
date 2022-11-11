@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import Dice from "./Dice";
 
@@ -17,19 +18,23 @@ const RollDice = (props) => {
       die: sides[Math.floor(Math.random() * sides.length)],
       rolling: true
     })
-
-    setTimeout(() => {
-      this.setState({ rolling: false })
-    }, 1000)
   }
+
+  useEffect(() => {
+    if (state.rolling) {
+      setTimeout(() => {
+        setState({ ...state, rolling: false })
+      }, 1000)
+    }
+  }, [state])
 
 
   return (
-    <div>
-      <div>
-        <Dice side={state.die} rolling = {state.rolling} />
+    <div className="rollDice">
+      <div className="diceContainer">
+        <Dice side={state.die} rolling={state.rolling} />
       </div>
-      <button type="Submit" onClick={roll}>{state.rolling ? 'Rolling': 'Click to Roll'}</button>
+      <button type="Submit" onClick={roll} className = "rollButton"> {state.rolling ? 'Rolling' : 'Click to Roll'} </button>
     </div>
 
   )
