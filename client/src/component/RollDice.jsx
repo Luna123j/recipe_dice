@@ -38,7 +38,7 @@ const RollDice = (props) => {
       setStop(false)
       setState({ ...state, rolling: false });
     }
-  }, [state])
+  }, [state,stop])
 
   return (
     <div className="rollDice">

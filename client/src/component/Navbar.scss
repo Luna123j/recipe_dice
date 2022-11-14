@@ -3,11 +3,34 @@
   width: 100%;
 }
 
+.navbar-default {
+  width: 100%;
+}
+
 .navbar-nav {
   flex-direction: row;
-  
 }
+
 
 .nav-item {
   margin: 10px;
 }
+
+.navbarItems {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+
+.dropdown-menu {
+  min-width:inherit;
+}
+
+
+
