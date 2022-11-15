@@ -1,12 +1,14 @@
 import React from "react";
+import './EditDice.scss';
 
-const EditDice = (props)=>{
+const EditDice = (props) => {
+  let inputArr = [];
 
-  const inputHandler = (e)=>{
+  const inputHandler = (e) => {
     e.preventDefault();
     let inputStr = e.target.value;
-    let inputArr = []
-    if (inputStr.length>0){
+
+    if (inputStr.length > 0) {
       inputArr = inputStr.split(',');
     }
   }
@@ -14,8 +16,9 @@ const EditDice = (props)=>{
   return (
     <div className="editDiv">
       <label>put content-----seperate items by ,</label>
-      <input id = 'input recipe' onChange={inputHandler}/>
-      <button type="Submit">update</button>
+      <input id='input recipe' onChange={inputHandler} />
+
+      <button type="Submit" onClick={()=>props.editContent(inputArr)}>update</button>
     </div>
   )
 }
