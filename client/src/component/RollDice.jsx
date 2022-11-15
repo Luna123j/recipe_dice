@@ -34,7 +34,7 @@ const RollDice = (props) => {
   }
 
   const handleEdit=()=>{
-    
+    navigate("/editDice")
 
   }
 
