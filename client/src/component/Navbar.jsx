@@ -10,7 +10,6 @@ const Navbar = () => {
     setLan(e.target.innerText)
   }
 
-
   return (
     <nav className="navbar navbar-default">
       <div className="navbarItems">
