@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Dice from "./Dice";
 import './RollDice.scss'
 
@@ -13,12 +14,11 @@ const RollDice = (props) => {
   })
 
   const [stop, setStop] = useState(false)
-
+  const navigate = useNavigate();
 
   const roll = () => {
     // const recipesIndex = Math.floor(Math.random() * recipesArr.length);
-    let timesRepeat = 0;
-
+    let timesRepeat = 0; 
     const repeat = setInterval(() => {
       timesRepeat += 1;
       setState({
@@ -33,6 +33,11 @@ const RollDice = (props) => {
     }, 50)
   }
 
+  const handleEdit=()=>{
+    
+
+  }
+
   useEffect(() => {
     if (state.rolling && stop) {
       setStop(false)
@@ -45,6 +50,7 @@ const RollDice = (props) => {
       <div className="diceContainer">
         <Dice rolling={state.rolling} randomRecipe={state.randomRecipe} />
         <button type="Submit" onClick={roll}> {state.rolling ? 'Rolling' : 'Click to Roll'} </button>
+        <button type="Submit" onClick ={handleEdit}>Edit Rolling Item</button>
       </div>
     </div>
 
