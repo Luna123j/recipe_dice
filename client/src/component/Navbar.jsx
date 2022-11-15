@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import './Navbar.scss';
 const Navbar = () => {
 
@@ -15,7 +16,7 @@ const Navbar = () => {
       <div className="navbarItems">
         <ul className="nav navbar-nav">
           <li className="nav-item">
-            Home
+            <Link to="/">Home</Link>
           </li>
           <li className="nav-item">
             Recipes
