@@ -1,9 +1,10 @@
 import React from "react";
 import './EditDice.scss';
+import { useNavigate } from "react-router-dom";
 
 const EditDice = (props) => {
   let inputArr = [];
-
+  const navigate = useNavigate()
   const inputHandler = (e) => {
     e.preventDefault();
     let inputStr = e.target.value;
@@ -18,7 +19,7 @@ const EditDice = (props) => {
       <label>put content-----seperate items by ,</label>
       <input id='input recipe' onChange={inputHandler} />
 
-      <button type="Submit" onClick={()=>props.editContent(inputArr)}>update</button>
+      <button type="Submit" onClick={()=>{props.editContent(inputArr); navigate('/')}}>update</button>
     </div>
   )
 }
