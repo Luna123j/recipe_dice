@@ -4,6 +4,9 @@ import Navbar from './component/Navbar';
 import { BrowserRouter, Switch, Route, Link, Routes, useNavigate } from "react-router-dom";
 import EditDice from './component/EditDice';
 import React, { createContext, useContext, useState } from 'react';
+import Recipes from './component/Recipes';
+import SearchRecipes from './component/SearchRecipes';
+
 
 function App() {
 
@@ -14,7 +17,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<RollDice diceContent={diceContent} />} />
-          <Route path="/editDice" element={<EditDice editContent = {setDiceContent} />} />
+        <Route path="/editDice" element={<EditDice editContent={setDiceContent} />} />
+        <Route path="/myRecipe" element={<Recipes />} />
+        <Route path="/searchRecipe" element={<SearchRecipes />} />
       </Routes>
     </div>
   );
