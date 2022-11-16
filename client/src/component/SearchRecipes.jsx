@@ -1,8 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const SearchRecipes = (props) => {
-  console.log(props.apiResult)
   const apiResult = props.apiResult;
+  const navigate = useNavigate();
+
+  const clickHandler = (content)=>{
+    props.setDetail(content);
+    navigate('/recipeDetails')
+  }
 
   return (
     <div>
@@ -11,7 +17,7 @@ const SearchRecipes = (props) => {
           {apiResult.map((obj,index) => {
             let content = obj.recipe;
             return(
-             <tr key={index}>
+             <tr key={index} onClick={(e)=>{e.preventDefault(); clickHandler(content);}} >
               <td ><img src={`${content.images.THUMBNAIL.url}`} alt={`${content.label}`}/></td>
               <td>{content.label}</td>
             </tr>
