@@ -1,9 +1,10 @@
 import React from "react";
-import Recipes from "./Recipes";
 
 const SearchRecipes = (props)=>{
+  console.log(props.apiResult)
   return (
     <div>Recipes result</div>
+                                          
   )
 }
 

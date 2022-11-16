@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const Navbar = () => {
+const Navbar = (props) => {
 
   const PROJECT_ID = process.env.REACT_APP_PROJECT_ID;
   const API_KEY = process.env.REACT_APP_API_KEY;
@@ -22,7 +22,6 @@ const Navbar = () => {
   const [lan, setLan] = useState('English')
   const [input, setInput] = useState('')
   const [search, setSearch] = useState(false);
-  const [apiResult, setApiResult] = useState([])
   
   const recipeName = input;
   const urlLink = `https://api.edamam.com/api/recipes/v2?type=public&q=${recipeName}&app_id=${PROJECT_ID}&app_key=${API_KEY}`
@@ -47,7 +46,7 @@ const Navbar = () => {
     fetch(urlLink)
       .then((res) => {
         return res.json() })
-      .then(result => setApiResult(result.hits))
+      .then(result => props.setApiResult(result.hits))
       .catch(error => console.log(error))
   }, [search])
 
