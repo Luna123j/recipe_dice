@@ -1,7 +1,8 @@
 import React from "react";
 import { useEffect } from "react";
-import { useState, useContext} from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import CuisineType from "./CuisineType";
 import Dice from "./Dice";
 import './RollDice.scss'
 
@@ -14,12 +15,14 @@ const RollDice = (props) => {
     rolling: false,
   })
 
+ 
+
   const [stop, setStop] = useState(false)
   const navigate = useNavigate();
 
   const roll = () => {
     // const recipesIndex = Math.floor(Math.random() * recipesArr.length);
-    let timesRepeat = 0; 
+    let timesRepeat = 0;
     const repeat = setInterval(() => {
       timesRepeat += 1;
       setState({
@@ -34,7 +37,7 @@ const RollDice = (props) => {
     }, 50)
   }
 
-  const handleEdit=()=>{
+  const handleEdit = () => {
     navigate("/editDice")
 
   }
@@ -44,15 +47,17 @@ const RollDice = (props) => {
       setStop(false)
       setState({ ...state, rolling: false });
     }
-  }, [state,stop])
+  }, [state, stop])
 
   return (
     <div className="rollDice">
       <div className="diceContainer">
-        <Dice rolling={state.rolling} randomRecipe={state.randomRecipe} setApiResult={props.setApiResult}/>
+        <div>click on the dishes name to see it's recipes!</div>
+        <Dice rolling={state.rolling} randomRecipe={state.randomRecipe} setApiResult={props.setApiResult} />
         <button type="Submit" onClick={roll}> {state.rolling ? 'Rolling' : 'Click to Roll'} </button>
-        <button type="Submit" onClick ={handleEdit}>Edit Rolling Item</button>
+        <button type="Submit" onClick={handleEdit}>Edit Rolling Item</button>
       </div>
+      <div> <CuisineType /> </div>
     </div>
 
   )

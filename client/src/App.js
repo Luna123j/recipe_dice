@@ -16,13 +16,12 @@ function App() {
   const [apiResult, setApiResult] = useState([])
   const [detail, setDetail] = useState({})
 
-  console.log(detail)
   return (
     <div className="App">
       <Navbar setApiResult={setApiResult} lan = {lan} setLan={setLan}/>
       <Routes>
         <Route path="/" element={<RollDice diceContent={diceContent} lan={lan} setApiResult={setApiResult} />} />
-        <Route path="/editDice" element={<EditDice editContent={setDiceContent} />} />
+        <Route path="/editDice" element={<EditDice editContent={setDiceContent} diceContent = {diceContent} />} />
         <Route path="/myRecipe" element={<Recipes />} />
         <Route path="/searchRecipe" element={<SearchRecipes apiResult={apiResult} setDetail={setDetail}/>} />
         <Route path="/recipeDetails" element={<RecipeDetail detail= {detail}/>} />

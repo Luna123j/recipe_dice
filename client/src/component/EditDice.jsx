@@ -17,7 +17,7 @@ const EditDice = (props) => {
   return (
     <div className="editDiv">
       <label>put content-----seperate items by ,</label>
-      <input id='inputRecipe' onChange={inputHandler} />
+      <textarea id='inputRecipe' defaultValue={props.diceContent} onChange={inputHandler} />
 
       <button type="Submit" onClick={()=>{props.editContent(inputArr); navigate('/')}}>update</button>
     </div>
