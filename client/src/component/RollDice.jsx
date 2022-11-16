@@ -49,7 +49,7 @@ const RollDice = (props) => {
   return (
     <div className="rollDice">
       <div className="diceContainer">
-        <Dice rolling={state.rolling} randomRecipe={state.randomRecipe} />
+        <Dice rolling={state.rolling} randomRecipe={state.randomRecipe} setApiResult={props.setApiResult}/>
         <button type="Submit" onClick={roll}> {state.rolling ? 'Rolling' : 'Click to Roll'} </button>
         <button type="Submit" onClick ={handleEdit}>Edit Rolling Item</button>
       </div>
