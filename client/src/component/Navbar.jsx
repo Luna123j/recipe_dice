@@ -15,7 +15,7 @@ const Navbar = (props) => {
 
   const PROJECT_ID = process.env.REACT_APP_PROJECT_ID;
   const API_KEY = process.env.REACT_APP_API_KEY;
-  
+
   const navigate = useNavigate();
   const [input, setInput] = useState('')
 
@@ -49,7 +49,7 @@ const Navbar = (props) => {
       <div className="navbarItems">
         <ul className="nav navbar-nav">
           <li className="nav-item">
-            <Link to="/">Home</Link>
+            Dishes
           </li>
           <li className="nav-item">
             My Recipes
@@ -57,8 +57,8 @@ const Navbar = (props) => {
         </ul>
         <div>
           <form onSubmit={formHandler}>
-            <input type="text" onChange={searchHandler} />
-            <button type="Submit">Search</button>
+            <input className="searchInput" type="text" onChange={searchHandler} />
+            <button className="searchBtn" type="Submit"><i className="fa-solid fa-magnifying-glass"></i></button>
           </form>
 
         </div>

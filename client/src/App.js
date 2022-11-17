@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className='logo'>Dishes Generator</h1>
+      <h1 ><Link to="/" className='logo'>Dishes Generator</Link></h1>
       <Navbar setApiResult={setApiResult} lan = {lan} setLan={setLan}/>
       <Routes>
         <Route path="/" element={<RollDice diceContent={diceContent} lan={lan} setApiResult={setApiResult} />} />

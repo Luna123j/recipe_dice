@@ -1,6 +1,8 @@
 .navbar {
-  background-color: bisque;
   width: 100%;
+  font-family: 'Acme', sans-serif;
+  font-size: larger;
+  color:#738290;
 }
 
 .navbar-default {
@@ -37,4 +39,15 @@
   flex-direction: row;
 }
 
+.searchBtn{
+  color:#738290;
+  background-color: transparent;
+  border: 3px solid;
+  border-radius: 0 5px 5px 0 ;
+}
 
+.searchInput{
+  color:#738290;
+  border: 3px solid;
+
+}
