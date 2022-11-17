@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import RollDice from './component/RollDice';
 import Navbar from './component/Navbar';
 import { BrowserRouter, Switch, Route, Link, Routes, useNavigate } from "react-router-dom";
@@ -18,6 +18,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1 className='logo'>Dishes Generator</h1>
       <Navbar setApiResult={setApiResult} lan = {lan} setLan={setLan}/>
       <Routes>
         <Route path="/" element={<RollDice diceContent={diceContent} lan={lan} setApiResult={setApiResult} />} />

@@ -15,9 +15,7 @@ const Navbar = (props) => {
 
   const PROJECT_ID = process.env.REACT_APP_PROJECT_ID;
   const API_KEY = process.env.REACT_APP_API_KEY;
-
-  // const urlLink = `https://api.edamam.com/api/recipes/v2?type=public&q=chicken%20noodle&app_id=f8f20605&app_key=9fb81ef122483a5d50fe619c187c6de4`
-
+  
   const navigate = useNavigate();
   const [input, setInput] = useState('')
 

@@ -1,6 +1,6 @@
 .rollDice {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
   .diceContainer {
     display: flex;
@@ -8,7 +8,7 @@
     justify-content: center;
     width: 100%;
   }
-  button {
+  .submitBtn {
     width: 15em;
     padding: 1.5em;
     border: 0px;
@@ -16,4 +16,8 @@
     margin-top: 3em;
     align-self: center;
   }
+}
+
+.tagContainer{
+  width: 50%;
 }
