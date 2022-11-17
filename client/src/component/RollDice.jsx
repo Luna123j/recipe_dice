@@ -14,8 +14,7 @@ const RollDice = (props) => {
     randomRecipe: 'none',
     rolling: false,
   })
-
-
+  const [open, setOpen] = useState(false)
 
   const [stop, setStop] = useState(false)
   const navigate = useNavigate();
@@ -42,6 +41,10 @@ const RollDice = (props) => {
 
   }
 
+  const toggleOpen = ()=>{
+    setOpen(!open)
+  }
+
   useEffect(() => {
     if (state.rolling && stop) {
       setStop(false)
@@ -51,7 +54,15 @@ const RollDice = (props) => {
 
   return (
     <div className="rollDice">
+      <div className="sideBar">
+        <button className="sideBtn" onClick={toggleOpen}><i className="fa-solid fa-angles-right"></i></button>
+        {/* <div className="tagContainer">
+          <CuisineType />
+        </div> */}
+      </div>
+      <div className="sideBar">options</div>
       <div className="diceContainer">
+
         <Dice rolling={state.rolling} randomRecipe={state.randomRecipe} setApiResult={props.setApiResult} />
         <div className="button-container">
           <button className="editBtn" type="Submit" onClick={handleEdit}>Edit Rolling Dishes</button>
@@ -59,10 +70,7 @@ const RollDice = (props) => {
         </div>
 
       </div>
-      <div className="tagContainer">
-        <CuisineType />
 
-      </div>
     </div>
 
   )
