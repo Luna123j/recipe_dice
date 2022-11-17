@@ -23,8 +23,8 @@ const Dice = (props) => {
   }
 
   return (
-    <div className="dice" onClick={clickHandler}>
-      <p >{props.randomRecipe}</p>
+    <div className="dice" >
+      <p className="dishesName" onClick={clickHandler}>{props.randomRecipe}</p>
     </div>
 
   )
