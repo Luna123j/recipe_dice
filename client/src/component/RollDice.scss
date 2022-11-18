@@ -2,14 +2,15 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: #FFFFFB;
+  background-color: #fffffb;
   height: 600px;
   .diceContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: 3em;
+    margin-top: 4em;
+    margin-right: 3em;
   }
   .submitBtn {
     width: 8em;
@@ -22,14 +23,14 @@
     -moz-animation: glowing 1300ms infinite;
     -o-animation: glowing 1300ms infinite;
     animation: glowing 1300ms infinite;
-    font-family: 'Acme', sans-serif;
+    font-family: "Acme", sans-serif;
     font-size: x-large;
     color: aliceblue;
   }
 
   .editBtn {
     color: #738290;
-    font-family: 'Acme', sans-serif;
+    font-family: "Acme", sans-serif;
     width: 11em;
     padding: 0.5em;
     margin-bottom: 0.5em;
@@ -38,34 +39,39 @@
     margin-top: 3em;
     align-self: center;
     cursor: pointer;
-  } 
+  }
 
-  .sideBtn{
+  .sideBtn {
     height: 100%;
     border: none;
     background-color: transparent;
     animation: mover 1s infinite alternate;
     font-size: x-large;
+    color: #738290;
   }
-
- 
 }
 
 .tagContainer {
-  width: 50%;
+  width: 100%;
 }
 
-.button-container{
+.button-container {
   display: flex;
   flex-direction: column;
-  
 }
 
-.sideBar{
+.sideBar {
+  border: solid;
   height: 100%;
+  width: 400px;
   text-align: center;
   vertical-align: middle;
   line-height: 600px;
+}
+
+.tagTitle{
+  color: #869D96;
+  font-weight: 500;
 }
 
 @-webkit-keyframes glowing {
@@ -74,8 +80,8 @@
     -webkit-box-shadow: 0 0 3px #738290;
   }
   50% {
-    background-color: #A1B5D8;
-    -webkit-box-shadow: 0 0 15px #A1B5D8;
+    background-color: #a1b5d8;
+    -webkit-box-shadow: 0 0 15px #a1b5d8;
   }
   100% {
     background-color: #738290;
@@ -89,8 +95,8 @@
     box-shadow: 0 0 3px #738290;
   }
   50% {
-    background-color: #A1B5D8;
-    box-shadow: 0 0 15px #A1B5D8;
+    background-color: #a1b5d8;
+    box-shadow: 0 0 15px #a1b5d8;
   }
   100% {
     background-color: #738290;

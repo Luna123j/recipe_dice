@@ -11,7 +11,7 @@ const RollDice = (props) => {
 
   const recipesArr = props.diceContent;
   const [state, setState] = useState({
-    randomRecipe: 'none',
+    randomRecipe: 'Pizza',
     rolling: false,
   })
   const [open, setOpen] = useState(false)
@@ -41,7 +41,7 @@ const RollDice = (props) => {
 
   }
 
-  const toggleOpen = ()=>{
+  const toggleOpen = () => {
     setOpen(!open)
   }
 
@@ -54,13 +54,14 @@ const RollDice = (props) => {
 
   return (
     <div className="rollDice">
-      <div className="sideBar">
-        <button className="sideBtn" onClick={toggleOpen}><i className="fa-solid fa-angles-right"></i></button>
-        {/* <div className="tagContainer">
-          <CuisineType />
-        </div> */}
-      </div>
-      <div className="sideBar">options</div>
+      {open ?
+        <div className="tagTitle"> Cuisine Type
+          <div className="tagContainer">
+            <CuisineType />
+          </div>
+        </div>
+        : ""}
+      <button className="sideBtn" onClick={toggleOpen}>{open ? <i className="fa-solid fa-angles-left"></i> : <i className="fa-solid fa-angles-right"></i>}</button>
       <div className="diceContainer">
 
         <Dice rolling={state.rolling} randomRecipe={state.randomRecipe} setApiResult={props.setApiResult} />
@@ -70,7 +71,6 @@ const RollDice = (props) => {
         </div>
 
       </div>
-
     </div>
 
   )
