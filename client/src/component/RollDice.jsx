@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import CuisineType from "./CuisineType";
 import Dice from "./Dice";
 import './RollDice.scss'
+import SideBar from "./SideBar";
 
 
 const RollDice = (props) => {
@@ -55,11 +56,7 @@ const RollDice = (props) => {
   return (
     <div className="rollDice">
       {open ?
-        <div className="tagTitle"> Cuisine Type
-          <div className="tagContainer">
-            <CuisineType />
-          </div>
-        </div>
+        <SideBar />
         : ""}
       <button className="sideBtn" onClick={toggleOpen}>{open ? <i className="fa-solid fa-angles-left"></i> : <i className="fa-solid fa-angles-right"></i>}</button>
       <div className="diceContainer">
