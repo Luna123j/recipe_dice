@@ -1,13 +1,13 @@
 import React from "react";
-
+import './RecipeDetail.scss'
 
 const RecipeDetail = (props) => {
   const details = props.detail;
   
   return (
-    <div>
-      Here
+    <div className="detailContainer">
       <p>{details.label}</p>
+      <img src={details.images.SMALL.url}></img>
       <tbody>{details.ingredients.map((line,index) => {
         return (
           <tr key={index}>
