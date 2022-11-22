@@ -5,7 +5,7 @@
 
   .table-format {
     margin-top: 2em;
-    width: 80%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -20,16 +20,22 @@
     border-width: 2px 2px 2px 2px;
     border-color: #a1b5d8;
     border-radius: 100px;
-
-    td{
-      padding: 0.5em;
-
-    }
-
   }
 
-  tbody tr:nth-child(even){
-    border:none
+  .first {
+    width: 10em;
   }
 
+  .second {
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  td {
+    padding: 0.5em;
+  }
+
+  tbody tr:nth-child(even) {
+    border: none;
+  }
 }

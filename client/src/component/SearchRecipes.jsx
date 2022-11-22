@@ -20,8 +20,8 @@ const SearchRecipes = (props) => {
             let content = obj.recipe;
             return(
              <tr key={index} onClick={(e)=>{e.preventDefault(); clickHandler(content);}} >
-              <td ><img src={`${content.images.THUMBNAIL.url}`} alt={`${content.label}`}/></td>
-              <td>{content.label}</td>
+              <td className="first"><img src={`${content.images.THUMBNAIL.url}`} alt={`${content.label}`}/></td>
+              <td className="second">{content.label}</td>
             </tr>
             )
           })}
