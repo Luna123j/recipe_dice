@@ -5,28 +5,40 @@
   align-content: center;
   font-family: "Acme", sans-serif;
 
-  label{
+  label {
     margin-bottom: 2em;
   }
 
-  mark{
+  mark {
     color: #a1b5d8;
     font-size: larger;
     background-color: rgb(255, 255, 153);
   }
 
   #inputRecipe {
+    font-family: 'Rubik:wght@600', sans-serif;
+    color: gray;
     width: 60%;
     overflow-y: scroll;
-    height: 100px;
+    height: 200px;
     resize: none; /* Remove this if you want the user to resize the textarea */
     align-self: center;
+    outline:2px dashed #6b88a4;
+    border:none;
+    font-size: large;
+    padding: 0.8em;
+  }
 
+  #inputRecipe:focus {
+    outline:3px dashed #1e5e99;
+    border:none;
+    color: rgba(79, 150, 136, 0.915)
   }
 
   .updateBtn {
     color: #738290;
-    width: 11em;
+    background-color:rgba(210, 197, 230, 0.915);
+    width: 8em;
     padding: 0.5em;
     margin-bottom: 0.5em;
     border: none;
