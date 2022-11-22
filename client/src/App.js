@@ -7,7 +7,7 @@ import React, { createContext, useContext, useState } from 'react';
 import Recipes from './component/Recipes';
 import SearchRecipes from './component/SearchRecipes';
 import RecipeDetail from './component/RecipeDetail';
-import {dishesName} from './helpers/dishesName.js'
+import {dishesName} from './helpers/initialArr'
 
 function App() {
 
