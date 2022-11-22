@@ -11,7 +11,6 @@ import SideBar from "./SideBar";
 const RollDice = (props) => {
 
   const recipesArr = props.diceContent;
-  console.log(recipesArr)
   const [state, setState] = useState({
     randomRecipe: 'Pizza',
     rolling: false,
@@ -35,7 +34,12 @@ const RollDice = (props) => {
         setStop(true)
         clearInterval(repeat);
       }
+
     }, 50)
+  }
+
+  const rollNothing = ()=>{
+    alert('no result found')
   }
 
   const handleEdit = () => {
@@ -57,15 +61,14 @@ const RollDice = (props) => {
   return (
     <div className="rollDice">
       {open ?
-        <SideBar setDiceContent = {props.setDiceContent} />
+        <SideBar setDiceContent={props.setDiceContent} />
         : ""}
       <button className="sideBtn" onClick={toggleOpen}>{open ? <i className="fa-solid fa-angles-left"></i> : <i className="fa-solid fa-angles-right"></i>}</button>
       <div className="diceContainer">
-
         <Dice rolling={state.rolling} randomRecipe={state.randomRecipe} setApiResult={props.setApiResult} />
         <div className="button-container">
           <button className="editBtn" type="Submit" onClick={handleEdit}>Edit Rolling Dishes</button>
-          <button className="submitBtn" type="Submit" onClick={roll}> {state.rolling ? 'Rolling' : 'Click to Roll'} </button>
+          <button className="submitBtn" type="Submit" onClick={recipesArr.length>0 ? roll : rollNothing}> {state.rolling ? 'Rolling' : 'Click to Roll'} </button>
         </div>
 
       </div>

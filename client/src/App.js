@@ -16,8 +16,6 @@ function App() {
   const [apiResult, setApiResult] = useState([])
   const [detail, setDetail] = useState({})
 
-  console.log(apiResult)
-
   return (
     <div className="App">
       <h1 ><Link to="/" className='logo'>Dishes Generator</Link></h1>
