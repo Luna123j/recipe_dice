@@ -3,7 +3,7 @@ import React from "react";
 
 const RecipeDetail = (props) => {
   const details = props.detail;
-  console.log(details)
+  
   return (
     <div>
       Here
