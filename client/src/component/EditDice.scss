@@ -1,6 +1,38 @@
 .editDiv {
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
   align-content: center;
+  font-family: "Acme", sans-serif;
 
+  label{
+    margin-bottom: 2em;
+  }
+
+  mark{
+    color: #a1b5d8;
+    font-size: larger;
+    background-color: rgb(255, 255, 153);
+  }
+
+  #inputRecipe {
+    width: 60%;
+    overflow-y: scroll;
+    height: 100px;
+    resize: none; /* Remove this if you want the user to resize the textarea */
+    align-self: center;
+
+  }
+
+  .updateBtn {
+    color: #738290;
+    width: 11em;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border: none;
+    border-radius: 10px;
+    margin-top: 3em;
+    align-self: center;
+    cursor: pointer;
+  }
 }

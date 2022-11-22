@@ -70,7 +70,6 @@ const RollDice = (props) => {
           <button className="editBtn" type="Submit" onClick={handleEdit}>Edit Rolling Dishes</button>
           <button className="submitBtn" type="Submit" onClick={recipesArr.length>0 ? roll : rollNothing}> {state.rolling ? 'Rolling' : 'Click to Roll'} </button>
         </div>
-
       </div>
     </div>
 
