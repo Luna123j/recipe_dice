@@ -11,6 +11,7 @@ import SideBar from "./SideBar";
 const RollDice = (props) => {
 
   const recipesArr = props.diceContent;
+  console.log(recipesArr)
   const [state, setState] = useState({
     randomRecipe: 'Pizza',
     rolling: false,
@@ -56,7 +57,7 @@ const RollDice = (props) => {
   return (
     <div className="rollDice">
       {open ?
-        <SideBar />
+        <SideBar setDiceContent = {props.setDiceContent} />
         : ""}
       <button className="sideBtn" onClick={toggleOpen}>{open ? <i className="fa-solid fa-angles-left"></i> : <i className="fa-solid fa-angles-right"></i>}</button>
       <div className="diceContainer">

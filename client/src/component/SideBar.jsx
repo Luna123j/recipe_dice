@@ -2,12 +2,12 @@ import React from "react";
 import CuisineType from "./CuisineType";
 import './SideBar.scss'
 
-const SideBar = ()=>{
+const SideBar = (props)=>{
   return (
     <div className="sideContainer">
           <div className="tagTitle"> Cuisine Type
             <div className="tagContainer">
-              <CuisineType />
+              <CuisineType  setDiceContent = {props.setDiceContent} />
             </div>
           </div>
           <div className="tagTitle"> Required Ingredients 1

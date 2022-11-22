@@ -16,12 +16,14 @@ function App() {
   const [apiResult, setApiResult] = useState([])
   const [detail, setDetail] = useState({})
 
+  console.log(apiResult)
+
   return (
     <div className="App">
       <h1 ><Link to="/" className='logo'>Dishes Generator</Link></h1>
       <Navbar setApiResult={setApiResult} lan = {lan} setLan={setLan}/>
       <Routes>
-        <Route path="/" element={<RollDice diceContent={diceContent} lan={lan} setApiResult={setApiResult} />} />
+        <Route path="/" element={<RollDice diceContent={diceContent} lan={lan} setApiResult={setApiResult} setDiceContent = {setDiceContent} />} />
         <Route path="/editDice" element={<EditDice editContent={setDiceContent} diceContent = {diceContent} />} />
         <Route path="/myRecipe" element={<Recipes />} />
         <Route path="/searchRecipe" element={<SearchRecipes apiResult={apiResult} setDetail={setDetail}/>} />

@@ -22,6 +22,7 @@ const Dice = (props) => {
     navigate('/searchRecipe')
   }
 
+  
   return (
     <div className="dice" >
       <p className="dishesName" onClick={clickHandler}>{props.randomRecipe}</p>
