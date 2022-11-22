@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import './SearchRecipes.scss'
 
 const SearchRecipes = (props) => {
   const apiResult = props.apiResult;
@@ -10,9 +11,10 @@ const SearchRecipes = (props) => {
     navigate('/recipeDetails')
   }
 
+  console.log(apiResult)
   return (
-    <div>
-      <table className="table">
+    <div className="searchContainer">
+      <table className="table-format">
         <tbody>
           {apiResult.map((obj,index) => {
             let content = obj.recipe;
