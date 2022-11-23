@@ -12,7 +12,7 @@ const RollDice = (props) => {
 
   const recipesArr = props.diceContent;
   const [state, setState] = useState({
-    randomRecipe: 'Pizza',
+    randomRecipe: `${recipesArr[0]}`,
     rolling: false,
   })
   const [open, setOpen] = useState(false)
