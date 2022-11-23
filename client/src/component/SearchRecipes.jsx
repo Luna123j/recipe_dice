@@ -21,7 +21,7 @@ const SearchRecipes = (props) => {
             return(
              <tr key={index} onClick={(e)=>{e.preventDefault(); clickHandler(content);}} >
               <td className="first"><img src={`${content.images.THUMBNAIL.url}`} alt={`${content.label}`}/></td>
-              <td className="second">{content.label}</td>
+              <td ><p className="second">{content.label} </p><p>{content.mealType}</p></td>
             </tr>
             )
           })}
